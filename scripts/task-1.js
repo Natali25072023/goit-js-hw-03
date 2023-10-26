@@ -1,12 +1,8 @@
-function makeTransaction(quantity, pricePerDroid, customerCredits) { 
-    const totalPrice = quantity * pricePerDroid;
-    if (totalPrice > customerCredits) {
-        console.log(`Insufficient funds!`);
-    }
-    else { console.log(`You ordered ${quantity} droids worth ${quantity*pricePerDroid} credits!`);}
-    }
-makeTransaction(5, 3000, 23000);
-makeTransaction(3, 1000, 15000);
-makeTransaction(10, 5000, 8000);
-makeTransaction(8, 2000, 10000);
-makeTransaction(10, 500, 5000);
+function slugify(title) { 
+    let slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+    return slug;
+}
+console.log(slugify("Arrays for begginers"));
+console.log(slugify("English for developer"));
+console.log(slugify("Ten secrets of JavaScript"));
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));

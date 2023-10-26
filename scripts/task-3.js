@@ -1,15 +1,16 @@
-function checkForSpam(message) { 
-    const messageLowerCase=message.toLowerCase(); 
-    if (messageLowerCase.includes('spam')|| messageLowerCase.includes('sale') ) {
-        return true;
+function filterArray(numbers, value) {
+   let mas = [];
+    for (let i = 0; i < numbers.length; i+=1) {
+        //const element = array[index];
+        if (numbers[i] > value) {
+         res = mas.push(numbers[i]);
     }
-    else {return false; }
+    }
+    return res;
 }
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
     
-console.log(checkForSpam("Latest technology news"));
-console.log(checkForSpam("JavaScript weekly newsletter"));
-console.log(checkForSpam("Get best sale offers now!"));
-console.log(checkForSpam("Amazing SalE, only tonight!"));
-console.log(checkForSpam("Trust me, this is not a spam message"));
-console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
-console.log(checkForSpam("[SPAM] How to earn fast money?"));
